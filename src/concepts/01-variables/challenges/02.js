@@ -1,8 +1,10 @@
 export const variables = () => {
-  // declare a variable called vehicleMake
-  // log vehicleMake in the console
-  // declare a variable called vehicleSpeed
-  // log vehicleSpeed in the console
-  // reassign the value of vehicleSpeed
-  // log vehicleSpeed in the console
+  const vehicleMake = "Tesla";
+  console.log(vehicleMake);
+
+  let vehicleSpeed = 0;
+  console.log(vehicleSpeed);
+
+  vehicleSpeed = 60;
+  console.log(vehicleSpeed);
 };
