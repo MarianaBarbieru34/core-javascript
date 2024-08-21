@@ -54,3 +54,14 @@ const upperCaseLocations = locations.map((location) => {
 });
 
 console.log(upperCaseLocations);
+
+const numbers2 = [1, 2, 3];
+
+const double = numbers2.map((number) => {
+  return numbers * 2;
+});
+console.log(double);
+
+describe("vowelsAndConsonants", () => {
+  it("should return expeted message with vowels and consonants", () => {});
+});
