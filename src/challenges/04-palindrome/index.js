@@ -14,7 +14,7 @@ export const palindrome = (word) => {
   });
 
   // check if not valid
-  if (!isValid) {
+  if (!isValid || normaliseWordArray?.length === 0) {
     // return error message
     return "Error, invalid input string!";
   }

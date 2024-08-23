@@ -45,7 +45,7 @@ describe("palindrome", () => {
 
   it("should return error message for emty word", () => {
     const expected = "Error, invalid input string!";
-    const actual = palindrome("emty word");
+    const actual = palindrome("");
     expect(actual).toEqual(expected);
   });
 
