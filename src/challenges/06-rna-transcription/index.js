@@ -21,7 +21,26 @@ if (!isValid) {
   return "Failed to retrieve RNA transcription: Invalid DNA strand";
 }
 // map through the "dnaArray" and store output in an "rnaArray"
-const rnaArray = dnaArray.map((character) => {});
+const rnaArray = dnaArray.map((character) => {
+  // if character  A return U,
+  if (character === "A") {
+    return "U";
+  }
+  // if character G return C
+  if (character === "G") {
+    return "C";
+  }
+
+  //if character C return G
+  if (character === "C") {
+    return "G";
+  }
+
+  // if character T return A
+  if (character === "T") {
+    return "A";
+  }
+});
 // convert "rnaArray" to sting by using join method and store in variabile calledd "rna"
 const rna = rnaArray.join("");
 // return template literal with "rna"
