@@ -1,6 +1,5 @@
 export const takeHomeSalary = (annualIncome, taxYear) => {
   const validTaxYears = ["2021/2022", "2022/2023"];
-
   if (!validTaxYears.includes(taxYear)) {
     return "Please enter a valid tax year!";
   }
@@ -9,7 +8,8 @@ export const takeHomeSalary = (annualIncome, taxYear) => {
     return "Please enter a valid salary!";
   }
 
-  //check if annualIncome =<12500
+  //check if annualIncome <=12500
+
   if (annualIncome <= 12500) {
     return {
       annualIncome: annualIncome,
@@ -28,7 +28,7 @@ export const takeHomeSalary = (annualIncome, taxYear) => {
       if (annualIncome > 12500 && annualIncome <= 40000) {
         return 20;
       }
-      if (annualIncome > 40000 && annualIncome <= 100000) {
+      if (annualIncome > 40000 && annualIncome <= 10000) {
         return 40;
       }
       return 45;
@@ -38,7 +38,7 @@ export const takeHomeSalary = (annualIncome, taxYear) => {
       if (annualIncome > 12500 && annualIncome <= 40000) {
         return 18;
       }
-      if (annualIncome > 40000 && annualIncome <= 100000) {
+      if (annualIncome > 40000 && annualIncome <= 10000) {
         return 35;
       }
       return 40;
@@ -46,7 +46,6 @@ export const takeHomeSalary = (annualIncome, taxYear) => {
   };
 
   const taxPercentage = getTaxPercentage(annualIncome, taxYear);
-
   const taxAmount = (taxPercentage * taxableIncome) / 100;
 
   const takeHomeSalary = annualIncome - taxAmount;

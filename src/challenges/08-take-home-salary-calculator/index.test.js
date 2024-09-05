@@ -11,9 +11,7 @@ describe("takeHomeSalary", () => {
         taxAmount: 3500,
         takeHomeSalary: 26500,
       };
-
       const actual = takeHomeSalary(30000, "2021/2022");
-
       expect(actual).toEqual(expected);
     });
 
@@ -26,9 +24,7 @@ describe("takeHomeSalary", () => {
         taxAmount: 15000,
         takeHomeSalary: 35000,
       };
-
       const actual = takeHomeSalary(50000, "2021/2022");
-
       expect(actual).toEqual(expected);
     });
 
@@ -41,16 +37,14 @@ describe("takeHomeSalary", () => {
         taxAmount: 61875,
         takeHomeSalary: 88125,
       };
-
       const actual = takeHomeSalary(150000, "2021/2022");
-
       expect(actual).toEqual(expected);
     });
 
     it("should return expected result for 10000", () => {
       const expected = {
         annualIncome: 10000,
-        taxYear: "2021/2022",
+        taxYear: "2022/2023",
         taxableIncome: 0,
         taxPercentage: 0,
         taxAmount: 0,
@@ -72,7 +66,6 @@ describe("takeHomeSalary", () => {
         taxAmount: 3150,
         takeHomeSalary: 26850,
       };
-
       const actual = takeHomeSalary(30000, "2022/2023");
 
       expect(actual).toEqual(expected);
@@ -101,7 +94,6 @@ describe("takeHomeSalary", () => {
         taxAmount: 55000,
         takeHomeSalary: 95000,
       };
-
       const actual = takeHomeSalary(150000, "2022/2023");
 
       expect(actual).toEqual(expected);
@@ -128,16 +120,14 @@ describe("takeHomeSalary", () => {
       const actual = takeHomeSalary(30000, "2020/2021");
       expect(actual).toEqual(expected);
     });
-
-    it("should return error message for annual income  year 0", () => {
+    it("should return error message for annual income 0", () => {
       const expected = "Please enter a valid salary!";
       const actual = takeHomeSalary(0, "2021/2022");
       expect(actual).toEqual(expected);
     });
-
-    it("should return error message for negative  annual income  ", () => {
+    it("should return error message for negative annual income", () => {
       const expected = "Please enter a valid salary!";
-      const actual = takeHomeSalary(-30000, "2021/2022");
+      const actual = takeHomeSalary(-10000, "2021/2022");
       expect(actual).toEqual(expected);
     });
   });
